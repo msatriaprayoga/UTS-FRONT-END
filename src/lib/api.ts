@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://uts-backend-psi.vercel.app/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://uts-backend-psi.vercel.app',
 });
 
 api.interceptors.request.use((config) => {
