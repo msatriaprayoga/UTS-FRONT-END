@@ -17,9 +17,9 @@ const DashboardPage = () => {
     const fetchStats = async () => {
       try {
         const [evRes, catRes, spkRes] = await Promise.all([
-          api.get('api/events'),
-          api.get('api/categories'),
-          api.get('api/pembicara'),
+          api.get('/events'),
+          api.get('/categories'),
+          api.get('/pembicara'),
         ]);
         const upcoming = evRes.data.filter((e: { status: string }) => e.status === 'upcoming').length;
         setStats({
